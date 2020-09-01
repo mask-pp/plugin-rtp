@@ -49,6 +49,8 @@ func (session *Session) PacketHandler() error {
 				ssrc    uint32
 				isFull  bool
 			)
+
+			// rtp解析
 			if err := rtpPack.Unmarshal(p.Data); err != nil {
 				log.Println(err)
 				continue

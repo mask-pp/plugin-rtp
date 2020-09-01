@@ -63,7 +63,6 @@ func ListenRtp(port uint16) error {
 			PSCache:    make(map[uint32]*PSInfo),
 		}
 	)
-
 	defer rtp.Close()
 
 	e.Go(func() error {
